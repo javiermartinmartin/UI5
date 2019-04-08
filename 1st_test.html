@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Paragraph Types</title>
+    <script type="text/javascript">
+
+
+            function button() {
+              alert("button pressed");
+            }
+
+            function loaded() {
+              alert("Page loaded");
+              console.log("Page loaded");
+              /* Two entries are generated in the console */
+              console.log("First entry");
+              console.log("Second entry");
+
+              var y = multiply(5, 5);
+              console.log(y);
+            }
+
+            function multiply(a, b) {
+              var y = a * b;
+              return y;
+
+              var oObject = {
+              Characteristic1: "Value1",
+              Characteristic2: "Value2",
+              outputCharacteristic2: function() { alert("Characteristic2 is" + this.Characteristic2);     }
+
+            }
+            oObject.outputCharacteristic2();
+    </script>
+  </head>
+  <body onload="loaded()">
+    <h1>First JavaScript</h1>
+    <button type="button" onclick="button()">call function button</button>
+  </body>
+</html>
