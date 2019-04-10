@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <title>Paragraph Types</title>
     <style>
-      p {
-        background-color: light-gray;
+      .gray {
+        background-color: gray;
+      }
+      .l_gray {
+        background-color: lightgray;
+      }
+      .border {
+        width: 90px;
+        height: 90px;
+        border: 5px solid black;
+      }
+      .noborder {
         width: 100px;
-        border: 1px solid black;
+        height: 100px;
+        border: none;
       }
     </style>
 
@@ -15,22 +26,21 @@
     <script type="text/javascript">
       $(document).ready(function() {
         // Implementation
-        $("p").animate(
-          {
-            width: "70%",
-            opacity: 0.4,
-            marginLeft: "0.6in",
-            fontSize: "3em",
-            borderWidth: "10px"
-          },
-          1500
-        );
+        $("#box1").mouseover(function() {
+          $(this).removeClass("gray");
+          $(this).addClass("l_gray");
+        });
+
+        $("#box1").mouseout(function() {
+          $(this).removeClass("l_gray");
+          $(this).addClass("gray");
+        });
+
       });
     </script>
   </head>
   <body>
     <h1>Jquery 1</h1>
-    <p id="test">1st Paragraph</p>
-    <p id="test2">2nd Paragraph</p>
+    <div id="box1" class="gray border"></div>
   </body>
 </html>
