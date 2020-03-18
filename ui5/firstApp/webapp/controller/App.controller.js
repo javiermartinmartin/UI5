@@ -1,19 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast"
- ], function (Controller, MessageToast) {
+    "sap/ui/core/mvc/Controller"
+ ], function (Controller) {
     "use strict";
     return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
-
-      
-      onShowHello: function(){
-         var oBundle = this.getView().getModel("i18n").getResourceBundle();
-         var sRecipient = this.getView().getModel().getProperty("/recipient/name");
-         var sMsg = oBundle.getText("helloMsg", [sRecipient]);
-
-
-         MessageToast.show(sMsg);
-      }
-
-    });
+        onShowHello : function () {
+           // show a native JavaScript alert
+           alert("Hello World");
+        }
+     });
  });

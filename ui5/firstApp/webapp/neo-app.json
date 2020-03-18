@@ -1,0 +1,24 @@
+{
+    "welcomeFile": "/webapp/index.html",
+    "routes": [
+      {
+        "path": "/resources",
+        "target": {
+          "type": "application",
+          "name": "sapui5preview",
+          "entryPath": "/resources"
+        },
+        "description": "SAPUI5 Resources"
+      },
+      {
+        "path": "/resources",
+        "target": {
+          "type": "service",
+          "name": "sapui5",
+          "entryPath": "/resources"
+        },
+        "description": "SAPUI5 Resources"
+      }
+    ],
+    "sendWelcomeFileRedirect": true
+  }
